@@ -38,7 +38,7 @@ Fine-tuning DistilBERT, BERT, and Large BERT cased models for sentiment analysis
 
 ### Built With
  * <a href="https://github.com/zjshermanburke/FineTuningBERT">
-    <img src="Images/hugging_face_badge.png" alt="Hugging Face Logo" width="80" height="80">
+    <img src="Images/hugging_face_badge.png" alt="Hugging Face Logo" width="120" height="40">
   </a>
  
 * [![Next][Next.js]][Next-url]
