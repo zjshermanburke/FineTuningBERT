@@ -37,7 +37,11 @@
 Fine-tuning DistilBERT, BERT, and Large BERT cased models for sentiment analysis of financial data and creating a user interface that allows a user to select one of the models and enter a sentence for analysis.
 
 ### Built With
-
+* <div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+ 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 
