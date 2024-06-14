@@ -1,6 +1,9 @@
 # Python Imports
 import matplotlib.pyplot as plt
 
+# Pytorch Imports
+import torch
+
 # Scikit-Learn Imports
 from sklearn.metrics import ConfusionMatrixDisplay, f1_score, accuracy_score, confusion_matrix
 
@@ -49,7 +52,7 @@ def pipeline_generator(selected_model):
     selected_model = selected_model.strip().lower().replace(" ", "")
     
     if selected_model == 'distilbert':
-        model = './Models/BERTModel'
+        model = './Models/distilBERT'
         
     elif selected_model == 'bert':
         model = './Models/BERTModel'
@@ -62,7 +65,7 @@ def pipeline_generator(selected_model):
         
     model_pipeline = pipeline('text-classification',
                       model=model,
-                      device=0)
+                      device=device)
         
     return model_pipeline
 
@@ -93,6 +96,8 @@ def response_parser(user_input, model_pipeline):
 
 
 if __name__ =="__main__":
+    
+    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     
     model_input = get_model("Enter model to use (BERT, DistilBERT, LargeBERT): ")
     print(f"\nThe model selected is: {model_input}")
